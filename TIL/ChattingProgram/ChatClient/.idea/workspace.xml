@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c9129f73-ae15-43a3-a764-2fbac0dc9d7e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/src/main/java/com/group/libraryapp/dto/Calculator/Request/CalculatorAddRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Spring_Library_Application/library-app/library-app/src/main/java/com/group/libraryapp/dto/Calculator/Request/CalculatorAddRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmers/등수매기기/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmers/등수매기기/untitled/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmers/연속된수의합/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmers/연속된수의합/untitled/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmers/캐릭터의좌표/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmers/캐릭터의좌표/untitled/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmers/한번만등장한문자/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmers/한번만등장한문자/untitled/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QJkx2VKdiYjTXaK0vUcymfsSkT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/admin/til/TIL/Java_Spring_Library_Application/library-app/library-app"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9129f73-ae15-43a3-a764-2fbac0dc9d7e" name="Changes" comment="" />
+      <created>1685079317523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685079317523</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
