@@ -38,7 +38,7 @@ public class GlobalExceptionAdvice {
         System.out.println(e.getExceptionCode().getStatus());
         System.out.println(e.getMessage());
 
-
+        System.out.println("test");
         final ErrorResponse response = ErrorResponse.of(e.getExceptionCode());
         return response;
     }
