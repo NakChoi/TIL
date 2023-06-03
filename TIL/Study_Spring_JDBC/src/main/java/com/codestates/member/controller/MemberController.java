@@ -3,11 +3,13 @@ package com.codestates.member.controller;
 import com.codestates.member.dto.MemberPatchDto;
 import com.codestates.member.dto.MemberPostDto;
 import com.codestates.member.dto.MemberResponseDto;
+import com.codestates.member.dto.MultiResponseDto;
 import com.codestates.member.entity.Member;
 import com.codestates.member.mapper.MemberMapper;
 import com.codestates.member.service.MemberService;
 import com.codestates.utils.UriCreator;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -71,12 +73,14 @@ public class MemberController {
     }
 
     @GetMapping
-    public ResponseEntity getMembers() {
-        // TODO 페이지네이션을 적용하세요!
-        List<Member> members = memberService.findMembers();
-        List<MemberResponseDto> response = mapper.membersToMemberResponseDtos(members);
+    public ResponseEntity getMembers( @RequestParam int page,
+                                      @RequestParam int size) {
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        Page<Member> members = memberService.findMembers(page, size);
+        List<Member> page_members = members.getContent();
+        List<MemberResponseDto> responses = mapper.membersToMemberResponseDtos(page_members);
+
+        return new ResponseEntity<>(new MultiResponseDto<>(responses, members), HttpStatus.OK);
     }
 
     @DeleteMapping("/{member-id}")
