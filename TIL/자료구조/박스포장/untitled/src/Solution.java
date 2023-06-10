@@ -3,7 +3,7 @@ public class Solution {
 
 
         int cnt = 1;
-        int result = 0;
+        int result = 1;
 
 
 
@@ -19,10 +19,20 @@ public class Solution {
 
             if (boxes[i] > max) {
                 max = boxes[i];
-                result = cnt;
+                if(result < cnt){
+                    result = cnt;
+                }
                 cnt = 1;
 
             }
+
+            // 마지막까지 갈경우
+            if(i == boxes.length -1 ){
+                if(result < cnt){
+                    result = cnt;
+                }
+            }
+
 
         }
         
