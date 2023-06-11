@@ -1,11 +1,18 @@
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.stream.Stream;
 
 public class Solution {
-    public int queuePrinter(int bufferSize, int capacities, Integer[] documents) {
+    public int queuePrinter(int bufferSize, int capacities, int[] documents) {
 
-        Queue<Integer> queue = new LinkedList<>(Arrays.asList(documents));
+        Integer[] arr = new Integer[documents.length];
+
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = documents[i];
+        }
+
+        Queue<Integer> queue = new LinkedList<>(Arrays.asList(arr));
 
         int second = 0;
         int cap = 0;
@@ -16,24 +23,30 @@ public class Solution {
             buffer.add(0);
         }
 
-        while(queue.peek() != null ){
+        while( buffer.peek() != null ){
             // 버퍼 이동
-            buffer.poll();
+            cap -= buffer.poll();
 
 
-            int i = queue.peek();
+            Integer i = queue.peek();
 
 
-            if(cap + i <= capacities){
+            if(i != null && cap + i <= capacities){
                 // 맨 앞 값 빼기
 
-                buffer.add(queue.poll());
+                Integer pop = queue.poll();
+                buffer.add(pop);
+                cap += pop;
+            }else {
+                if(i != null){
+                    buffer.add(0);
+                }else {
+
+                }
+
             }
 
 
-            if(buffer.size() <2){
-                buffer.add(0);
-            }
             // 초
             second++;
 
@@ -45,6 +58,6 @@ public class Solution {
 
 
 
-        return 1;
+        return second;
     }
 }
