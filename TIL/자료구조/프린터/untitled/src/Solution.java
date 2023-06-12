@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.stream.Stream;
 
 public class Solution {
     public int queuePrinter(int bufferSize, int capacities, int[] documents) {
@@ -40,23 +39,15 @@ public class Solution {
             }else {
                 if(i != null){
                     buffer.add(0);
-                }else {
-
                 }
 
             }
-
 
             // 초
             second++;
 
 
         }
-
-
-
-
-
 
         return second;
     }
