@@ -12,3 +12,7 @@ public interface Marker {
     void write();
 
 }
+
+
+
+

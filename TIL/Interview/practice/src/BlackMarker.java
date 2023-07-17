@@ -4,9 +4,9 @@ public class BlackMarker implements Marker{
     int inkCapacity; // 마커 잉크 용량
     private final String color = "Black";
 
-    int width; // 마커 바디 길이
-    int length; // 마커 바디 두께
-    int lineWidth; // 마커 심 두께
+    private int width; // 마커 바디 길이
+    private int length; // 마커 바디 두께
+    private int lineWidth; // 마커 심 두께
 
     public BlackMarker(int width, int length, int lineWidth, int inkCapacity) {
         this.width = width;
@@ -90,5 +90,4 @@ public class BlackMarker implements Marker{
         }
 
     }
-
 }
