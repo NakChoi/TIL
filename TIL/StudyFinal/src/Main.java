@@ -3,10 +3,13 @@ public class Main {
 
         final Car car = new Car(1);
 
-        Bus bus = new Bus(car);
+        Bus bus = new Bus(1);
+        bus = new Bus(2);
 
-        bus.val.intVal = 3;
+        String a = "b";
 
-        System.out.println(car.intVal);
+        a = "d";
+
+
     }
 }
