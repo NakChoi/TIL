@@ -1,8 +1,8 @@
-public class Bus {
+public final class Bus {
 
-    public final Car val;
+    public int val;
 
-    public Bus(Car car) {
-        this.val = car;
+    public Bus(int val) {
+        this.val = val;
     }
 }

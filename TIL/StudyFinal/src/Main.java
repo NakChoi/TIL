@@ -6,10 +6,15 @@ public class Main {
 
         final Car car = new Car(1);
 
-        Bus bus = new Bus(car);
+        Bus bus = new Bus(1);
+        bus = new Bus(2);
 
-        bus.val.intVal = 3;
+        String a = "b";
 
+        a = "d";
+
+
+<<<<<<< HEAD
         System.out.println(car.intVal);
 
         Scanner in = new Scanner(System.in);
@@ -17,6 +22,8 @@ public class Main {
         in.
 
                 // A+B, A-B, A*B, A/B(몫), A%B(나머지)
+=======
+>>>>>>> 1ae28610b2878e677a06690fda1915a99700e2fa
     }
 }
 */
