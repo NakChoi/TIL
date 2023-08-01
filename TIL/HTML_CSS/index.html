@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>My First Heading</h1>
-    <p>My First Paragraph</p>
+    <p class="color-primary font-50">My First Paragraph : red</p> 
+    <p style="color: blue;">My Second Paragraph : blue</p> 
+    <p id="p1">My Third Paragraph : 30px</p> 
+
+
+    <input type="text"/>
+    <input type="number"/>
+    <select class="select-style1">
+        <option>Seoul</option>
+        <option>Jeju</option>
+    </select>
+
+    <table>
+        <thead class="tb-head">
+            <tr>
+                <td>이름</td>
+                <td>지역</td>
+                <td>번호</td>
+            </tr>
+        </thead>
+        <tbody class="tb-body">
+            <tr>
+                <td>홍길동</td>
+                <td>서울</td>
+                <td>01012345678</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+    
+    
+    <!-- <button type="button" onclick="javascript:alert('click button!!')">Click</button> -->
+    <!-- <img 
+    width="300px"
+    src="data:image/png;base64,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" /> -->
 </body>
 </html>
