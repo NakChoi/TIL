@@ -2,9 +2,10 @@ public class Main {
     public static void main(String[] args) {
 
         ThreadEx5_1 t1 = new ThreadEx5_1();
-        ThreadEx5_1 t2 = new ThreadEx5_1();
+        ThreadEx5_2 t2 = new ThreadEx5_2();
 
-        t2.setPriority(7);
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
 
 
         System.out.println("Priority of th1(-) : " + t1.getPriority());
