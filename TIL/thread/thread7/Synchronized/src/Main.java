@@ -29,8 +29,9 @@ class Account{
     }*/
 
     public void withdraw(int money) {
+        synchronized (this) {
         if (balance >= money) {
-           synchronized (this) {
+
                try {
                    Thread.sleep(1000);
                } catch (InterruptedException e) {
