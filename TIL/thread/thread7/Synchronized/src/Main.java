@@ -19,12 +19,24 @@ class Account{
         return balance;
     }
 
-    public synchronized void withdraw(int money) {
+    /*public synchronized void withdraw(int money) {
         if (balance >= money) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {}
             balance -= money;
+        }
+    }*/
+
+    public void withdraw(int money) {
+        if (balance >= money) {
+           synchronized (this) {
+               try {
+                   Thread.sleep(1000);
+               } catch (InterruptedException e) {
+               }
+               balance -= money;
+           }
         }
     }
 }
