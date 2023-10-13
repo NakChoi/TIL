@@ -133,7 +133,7 @@ export default function AddMenu() {
               </label>
             </div>
         </Button5>
-          {numberWonModalOpen3 && <ModalNumber_Won closeModal={setNumberWonModalOpen3} setdValue={setPrice3}/>}
+          {numberWonModalOpen3 && <ModalNumber_Won closeModal={setNumberWonModalOpen3} setValue={setPrice3}/>}
         </div>  
       </div> 
 

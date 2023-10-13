@@ -1,12 +1,24 @@
 import { React, useState } from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 
-const ModalNumber_Won = ({ isOpen, closeModal, setValue }) => {
+const ModalNumber_Won = ({ closeModal, setValue }) => {
+  const [isOpen, setIsOpen] = useState(true); // isOpen 상태 추가
+
+  
 
   const handleOutsideClick = (e) => {  // 모달창 외부 누르면 모달창 닫히게 해주는 이벤트
+
+    
     if (e.target.id === 'background') {
-      closeModal(false);
+     
+      //setValue(calc);
+      setIsOpen(false);
+      
+      setTimeout(() => {
+        closeModal(false);
+      }, 700);
+
     }
   }
 
@@ -25,19 +37,22 @@ const ModalNumber_Won = ({ isOpen, closeModal, setValue }) => {
     setCalc((prev) => str);
   };
 
-  const modalAnimationClass = isOpen ? 'modalOpen' : 'modalClosed';
-
-
   //ModalNumber_Won으로부터 받은 값을 해당 상태값에 설정하는 함수
   const confirmAndClose = () => {
+    
     setValue(calc);
-    closeModal(false);
+    setIsOpen(false);
+      
+    setTimeout(() => {
+      closeModal(false);
+    }, 700);
+  
  }
     return (
       <>
         
         <Container1 onClick={handleOutsideClick}>
-          <ModalBlock className={modalAnimationClass}>
+          <ModalBlock isOpen={isOpen}>
           
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <MainContainer> 
@@ -72,27 +87,36 @@ const ModalNumber_Won = ({ isOpen, closeModal, setValue }) => {
     );
   }
 
-
-  const modalOpenAnimation = keyframes`
-  from {
-    transform: translateY(0);
-  }
-  to {
-    
-    transform: translateY(100%);
-  }
-`;
-
-const modalCloseAnimation = keyframes`
+  
+  const fadeInUpAnimation = keyframes`
   from {
     transform: translateY(100%);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 `;
 
+const fadeOutDownAnimation = keyframes`
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+`;
 
+const fadeInUp = css`
+  ${fadeInUpAnimation} 0.7s ease-in-out forwards;
+`;
+
+const fadeOutDown = css`
+  ${fadeOutDownAnimation} 0.7s ease-in-out forwards;
+`;
 
 
 const Container1 = styled.div`
@@ -100,13 +124,16 @@ const Container1 = styled.div`
     width: 454px;
     height: 600px;
     z-index: 100;
-    top: 50vh;
+
+    top: 163px;
     left: 200px;
     right: 0px;
     bottom: 0px;
 
     display: flex;
 `;
+
+
 
 const Background = styled.div`
     position: fixed;
@@ -115,30 +142,21 @@ const Background = styled.div`
 
 `;
 
-// 스르륵
 const ModalBlock = styled.div`
 
     position: absolute;
-    top: 6.5rem;
+    top: 7.5rem;
     border-radius: 20px;
     background-color: white;
     color: black;
 
-    transition: height 3s ease-in-out;
-
     width: 454px;
-    height: 600px;
+    height: 598.5px;
 
     border :5px solid #DEDEDE;
-    z-index:101
+    z-index:101;
 
-    &.modalOpen {
-      animation: ${modalOpenAnimation} 1s;
-    }
-   
-    &.modalClosed {
-      animation: ${modalCloseAnimation} 2s;
-    }
+    animation: ${({ isOpen }) => (isOpen ? fadeInUp : fadeOutDown)};
     
     
 `;
