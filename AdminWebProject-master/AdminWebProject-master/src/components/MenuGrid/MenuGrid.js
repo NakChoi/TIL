@@ -6,7 +6,7 @@ export default function GridComponent() {
 
     useEffect(() => {
         // 데이터를 로드합니다.
-        axios.get('your-api-url')
+        axios.get('http://robros-alb-590302301.ap-northeast-2.elb.amazonaws.com/api/v1/product/category/2')
             .then((response) => {
                 setDataList(response.data);
             })

@@ -1,6 +1,8 @@
 import { React, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 import MenuGrid from "../../components/MenuGrid/MenuGrid";
 
@@ -97,6 +99,16 @@ export default function Menu() {
       setButton1Clicked(true);
       setButton2Clicked(false);
       setButton3Clicked(false);
+      console.log("안녕하세요~!");
+      axios.get('http://robros-alb-590302301.ap-northeast-2.elb.amazonaws.com/api/v1/product/category/1')
+  .then(response => {
+
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+  
   }};
 
 const handleButton2Click = () => {

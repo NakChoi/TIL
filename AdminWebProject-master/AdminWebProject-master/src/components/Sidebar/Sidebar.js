@@ -1,6 +1,7 @@
 import React from "react";
 import SidebarItem from "./SidebarItem";
 import Limage from '../../assets/Logo.png';
+import Dimage from '../../assets/nak9.jpg';
 
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
@@ -39,7 +40,7 @@ const Side = styled.div`
     `;
 
     
-  const Select = styled.select`
+  const Select = styled.select` // 성수 1호점
   padding-left: 5px;
   display:flex; 
   color: #A6A6A6;
@@ -71,10 +72,26 @@ const Side = styled.div`
   align-items: center; // 세로 방향 중앙 정렬
   justify-content : flex-end;	
   z-index:1; 
+
+
+
+  &:hover { 
+    display: flex;
+    align-items: center;
+    justify-content : center;	
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+    width: 157.5px;
+    height: 52.5px;
+    color: white;
+    background-color: #918181;
+    padding: 7px;
+    z-index:1; 
+  }
+
   &.active {
     display: flex; // 항목 전체에 배경색이 적용되도록 flex로 설정
     align-items: center; // 세로 방향 중앙 정렬
-    justify-content: right; // 가로 방향 중앙 정렬
+    justify-content: center; // 가로 방향 중앙 정렬
     width: 157.5px;
     height: 66px;
     color: white;
@@ -126,6 +143,7 @@ const StyledImage = styled.img`
             </Menu>
             
             <StyledImage src={Limage} /> 
+           
 
         </Side>
       )
