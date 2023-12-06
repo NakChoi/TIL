@@ -47,7 +47,7 @@ public class Main {
                     direction = "DOWN";
 
                 // 방향으로 나아갈건지
-                }else if(row - 1 <= 0 && col + 1 >= mat[0].length){
+                }else if(row - 1 >= 0 && col + 1 >= mat[0].length){
                     answer[i] = mat[++row][col];
                     direction = "DOWN";
 
